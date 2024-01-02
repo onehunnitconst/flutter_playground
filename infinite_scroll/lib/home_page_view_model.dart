@@ -9,9 +9,11 @@ class HomePageViewModel with ChangeNotifier {
   late final ScrollController controller;
   final ArticlesRepository _repository;
 
-  HomePageViewModel(
-      {required ArticlesRepository repository, int page = 1, int limit = 10})
-      : _repository = repository,
+  HomePageViewModel({
+    required ArticlesRepository repository,
+    int page = 1,
+    int limit = 10,
+  })  : _repository = repository,
         _page = page,
         _limit = limit {
     articles = [];
